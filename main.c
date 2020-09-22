@@ -3,10 +3,27 @@
 
 int main()
 {
-    int money;
-    printf("How many dollars do you want to convert?\n");
-    scanf("%d", &money);
-    printf("That's %d Egyptian pounds\n", money * 15);
+    int number;
+    int i;
+    int sum = 0;
+    printf("Enter a number!\n");
+    scanf(" %d", &number);
+    if (number > 1){
+        for (i = 1; i < number; i++){
+        if (number % i == 0){
+            sum = sum + i;
+            }
+        }
+        if (number == sum){
+            printf("%d is a perfect number\n", number);
+        }
+        else{
+            printf("%d is not a perfect number\n", number);
+        }
+    }
+    else{
+        printf("%d is not a perfect number\n", number);
+    }
     main();
     return 0;
 }
